@@ -31,6 +31,10 @@ body {
 }
 
 .modal {
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* height: 100vh; */
     position: absolute;
     top: 0;
     left: 0;
@@ -63,10 +67,14 @@ body {
 }
 
 .card {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
     border-radius: 5px;
     width: 90%;
     max-width: 600px;
-    margin: 200px auto;
+    margin:0 auto;
     padding: 20px;
     background-color: var(--white , #fff);
 }
