@@ -3,4 +3,126 @@
     --black:#0d1418;
     --gray:#eff0f0;
     --blackGray:#949798;
+    --bg-black:#2c3134;
+    --white:#fff;
+    --border:#d6d7d7;
 }
+
+* , ::before , ::after {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.btn {
+    padding: 7px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: var(--gray , #eff0f0);
+    background-color: var(--purple , #4827ec);
+    /* display: none; */
+}
+
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-black , #2c3134) ;
+}
+
+.modal.active {
+    display: block;
+}
+
+.modal.disable {
+    display: none;
+}
+
+.close {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    color: var(--white , #fff);
+    text-decoration: none;
+    background-color: var(--black);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.card {
+    border-radius: 5px;
+    width: 90%;
+    max-width: 600px;
+    margin: 200px auto;
+    padding: 20px;
+    background-color: var(--white , #fff);
+}
+
+.card__title {
+    margin: 0;
+    font-size: 24px;
+}
+
+.card__paragraph {
+    line-height: 1.5;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.input , .form__btn {
+    padding: 7px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid var(--border , #d6d7d7 );
+    
+}
+
+.input {
+    background-color: var(--gray);
+}
+
+.form__btn {
+    color: var(--white , #fff);
+    background-color: var(--purple , #4827ec );
+}
+
+.card__info {
+    display: block;
+    margin-top: 10px;
+    font-size: .75rem;
+    line-height: 1.5;
+    color: var(--blackGray);
+}
+
+.card__moreInfo {
+    color: var(--black);
+}
+
+@media screen and (min-width:768px) {
+    .form {
+        flex-direction: row;
+    }
+
+    .input {
+        width: 100%;
+    }
+}
+
+/* HACER QUE EL CARD ESTE CENTRADO EN EL CENTRO SIEMOPRE TANTO EN ANCHURA COMO ALTURA */
