@@ -1,12 +1,15 @@
 :root {
+    --white:#fff;
     --purple:#4827ec;
-
     --black:#0d1418;
     --gray:#eff0f0;
-    --blackGray:#949798;
+    --darkGray:#949798;
     --bg-black:#2c3134;
-    --white:#fff;
-    --border:#d6d7d7;
+    --borderInput:#d6d7d7;
+    
+    --fs-24px:1.5rem;
+    --fs-20px:1.25rem;
+    --fs-12px:0.75rem;
 }
 
 * , ::before , ::after {
@@ -57,10 +60,10 @@ body {
     height: 50px;
     border-radius: 50%;
     line-height: 50px;
-    font-size: 1.25rem;
+    font-size: var(--fs-20px , 1.25rem);
     text-decoration: none;
     color: var(--white , #fff);
-    background-color: var(--black);
+    background-color: var(--black ,  #2c3134);
 }
 
 .card {
@@ -78,7 +81,7 @@ body {
 
 .card__title {
     margin: 0;
-    font-size: 24px;
+    font-size: var(--fs-24px , 1.5rem);
 }
 
 .card__paragraph {
@@ -94,16 +97,16 @@ body {
 .input , .form__btn {
     padding: 7px;
     border-radius: 5px;
-    border: 1px solid var(--border , #d6d7d7 );
+    border: 1px solid var(--borderInput , #d6d7d7 );
     outline: none;
 }
 
 .input {
-    background-color: var(--gray);
+    background-color: var(--gray , #eff0f0);
 }
 
 .input:focus {
-    outline: 2px solid var(--purple);
+    outline: 2px solid var(--purple ,  #4827ec );
 }
 
 .form__btn {
@@ -115,13 +118,13 @@ body {
 .card__info {
     display: block;
     margin-top: 10px;
-    font-size: .75rem;
+    font-size: var(--fs-12px , 0.75rem);
     line-height: 1.5;
-    color: var(--blackGray);
+    color: var(--darkGray , #949798);
 }
 
 .card__moreInfo {
-    color: var(--black);
+    color: var(--black ,  #2c3134);
 }
 
 @media screen and (min-width:768px) {

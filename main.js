@@ -10,5 +10,4 @@ const $close = document.querySelector(".close");
         $modal.classList.remove("active" , "disable");
     })
 
-// Acomodar código  css
 // Añadir transiciones cuando click, etc, etc
