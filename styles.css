@@ -1,15 +1,19 @@
 :root {
     --white:#fff;
     --purple:#4827ec;
+    --darkPurple:#300af0;
     --black:#0d1418;
     --gray:#eff0f0;
     --darkGray:#949798;
     --bg-black:#2c3134;
     --borderInput:#d6d7d7;
-    
-    --fs-24px:1.5rem;
-    --fs-20px:1.25rem;
+    --green:#e0f5e1;
+    --red:#facfdc;
+
     --fs-12px:0.75rem;
+    --fs-14px: 0.875rem;
+    --fs-20px:1.25rem;
+    --fs-24px:1.5rem;
 }
 
 * , ::before , ::after {
@@ -17,6 +21,7 @@
 }
 
 body {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -34,7 +39,7 @@ body {
 }
 
 .modal {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     display: none;
@@ -66,8 +71,13 @@ body {
     background-color: var(--black ,  #2c3134);
 }
 
+.close:hover {
+    transition: .05s font-size;
+    font-size: 1.5rem;
+}
+
 .card {
-    position: absolute;
+    position: fixed;
     left: 50%;
     top: 50%;
     width: 90%;
@@ -107,6 +117,7 @@ body {
 
 .input:focus {
     outline: 2px solid var(--purple ,  #4827ec );
+    transition: .05s outline;
 }
 
 .form__btn {
@@ -125,6 +136,31 @@ body {
 
 .card__moreInfo {
     color: var(--black ,  #2c3134);
+}
+
+.btn:hover , .form__btn:hover {
+    background-color: var(--darkPurple , #300af0);
+    transition: .1s background-color;
+}
+
+.card__validateMesagge , .card__errorMesagge {
+    display: none ;
+}
+
+.card__validateMesagge.display , .card__errorMesagge.display {
+    display: block;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: var(--fs-14px , 0.875rem);
+}
+
+.card__validateMesagge.display {
+    background-color: var(--green , #e0f5e1);
+}
+
+.card__errorMesagge.display {
+    background-color: var(--red , #facfdc);
 }
 
 @media screen and (min-width:768px) {
