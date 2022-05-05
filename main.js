@@ -9,3 +9,6 @@ const $close = document.querySelector(".close");
     $close.addEventListener("click" , () => {
         $modal.classList.remove("active" , "disable");
     })
+
+// Acomodar código  css
+// Añadir transiciones cuando click, etc, etc

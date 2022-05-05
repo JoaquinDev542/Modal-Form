@@ -1,5 +1,6 @@
 :root {
     --purple:#4827ec;
+
     --black:#0d1418;
     --gray:#eff0f0;
     --blackGray:#949798;
@@ -27,14 +28,9 @@ body {
     border-radius: 5px;
     color: var(--gray , #eff0f0);
     background-color: var(--purple , #4827ec);
-    /* display: none; */
 }
 
 .modal {
-    /* display: flex; */
-    /* align-items: center; */
-    /* justify-content: center; */
-    /* height: 100vh; */
     position: absolute;
     top: 0;
     left: 0;
@@ -56,27 +52,28 @@ body {
     position: absolute;
     top: 50px;
     right: 20px;
-    color: var(--white , #fff);
-    text-decoration: none;
-    background-color: var(--black);
-    border-radius: 50%;
+    text-align: center;
     width: 50px;
     height: 50px;
+    border-radius: 50%;
     line-height: 50px;
-    text-align: center;
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: var(--white , #fff);
+    background-color: var(--black);
 }
 
 .card {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50% , -50%);
-    border-radius: 5px;
     width: 90%;
     max-width: 600px;
     margin:0 auto;
     padding: 20px;
+    border-radius: 5px;
     background-color: var(--white , #fff);
+    transform: translate(-50% , -50%);
 }
 
 .card__title {
@@ -97,16 +94,20 @@ body {
 .input , .form__btn {
     padding: 7px;
     border-radius: 5px;
-    outline: none;
     border: 1px solid var(--border , #d6d7d7 );
-    
+    outline: none;
 }
 
 .input {
     background-color: var(--gray);
 }
 
+.input:focus {
+    outline: 2px solid var(--purple);
+}
+
 .form__btn {
+    cursor: pointer;
     color: var(--white , #fff);
     background-color: var(--purple , #4827ec );
 }
@@ -132,5 +133,3 @@ body {
         width: 100%;
     }
 }
-
-/* HACER QUE EL CARD ESTE CENTRADO EN EL CENTRO SIEMOPRE TANTO EN ANCHURA COMO ALTURA */
